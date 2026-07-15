@@ -23,7 +23,7 @@ const statusLabel =
     <header class="project-hero">
       <div class="project-card-topline">
         <span class="project-code">{project.code}</span>
-        <span class="status-badge">{statusLabel}</span>
+        <span class={`status-badge status-${project.status}`}>{statusLabel}</span>
       </div>
       <p class="eyebrow">{t.labels.openclassrooms}</p>
       <h1>{content.title}</h1>
