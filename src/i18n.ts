@@ -75,7 +75,10 @@ export function isLocale(value: string | undefined): value is Locale {
 }
 
 export function localePath(locale: Locale, path = ""): string {
-  const cleanPath = path.replace(/^\/+|\/+$/g, "");
+  const [pathname = "", hash] = path.split("#", 2);
+  const cleanPath = pathname.replace(/^\/+|\/+$/g, "");
   const prefix = locale === defaultLocale ? "" : `/${locale}`;
-  return `${import.meta.env.BASE_URL.replace(/\/$/, "")}${prefix}${cleanPath ? `/${cleanPath}` : ""}/`;
+  const basePath = `${import.meta.env.BASE_URL.replace(/\/$/, "")}${prefix}${cleanPath ? `/${cleanPath}` : ""}/`;
+
+  return hash ? `${basePath}#${hash}` : basePath;
 }
