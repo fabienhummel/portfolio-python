@@ -7,40 +7,42 @@ export const ui = {
   en: {
     nav: { home: "Home", projects: "Projects", skills: "Skills", about: "About" },
     hero: {
-      eyebrow: "Python developer portfolio",
-      title: "IT technician transitioning to Python development",
-      intro: "I build useful, documented and maintainable applications by combining Python, data, automation and real-world IT experience.",
+      eyebrow: "Python software development portfolio",
+      title: "Python Software Designer and Developer",
+      intro: "Projects focused on Python application development, data processing, automation, software design and web development.",
       projects: "View projects",
-      github: "GitHub profile"
+      skills: "Key skills"
     },
     sections: {
+      projectsEyebrow: "Projects",
       projects: "Selected projects",
-      projectsIntro: "Only validated and intentionally published projects are displayed.",
-      skills: "Key skills",
-      skillsIntro: "Skills become visible as soon as they are supported by completed work.",
-      about: "About",
-      aboutText: "After a career spanning industrial operations, user support, reporting and IT/OT environments, I am developing a new specialisation in Python application development."
+      projectsIntro: "Validated projects presented through the results achieved, the technologies used and the skills demonstrated.",
+      skills: "Main skills",
+      aboutEyebrow: "Positioning",
+      about: "A profile combining software development and real-world IT experience",
+      aboutText: "I am building on experience in industrial environments, user support, reporting, automation and IT/OT to design useful, documented and maintainable Python applications."
     },
-    labels: { validated: "Validated", openclassrooms: "OpenClassrooms", details: "View project", source: "Source code", objective: "Objective", highlights: "Highlights", technologies: "Technologies", back: "Back to portfolio" }
+    labels: { validated: "Validated", openclassrooms: "OpenClassrooms", details: "View project", source: "Source code", objective: "Objective", context: "Context", highlights: "Highlights", technologies: "Skills and technologies", back: "Back to portfolio" }
   },
   fr: {
     nav: { home: "Accueil", projects: "Projets", skills: "Compétences", about: "À propos" },
     hero: {
-      eyebrow: "Portfolio développeur Python",
-      title: "Technicien informatique en évolution vers le développement Python",
-      intro: "Je conçois des applications utiles, documentées et maintenables en associant Python, données, automatisation et expérience informatique de terrain.",
+      eyebrow: "Portfolio développement logiciel Python",
+      title: "Développeur Concepteur Logiciel en Python",
+      intro: "Projets autour du développement d’applications Python, du traitement des données, de l’automatisation, de la conception logicielle et du développement web.",
       projects: "Voir les projets",
-      github: "Profil GitHub"
+      skills: "Compétences clés"
     },
     sections: {
+      projectsEyebrow: "Réalisations",
       projects: "Projets sélectionnés",
-      projectsIntro: "Seuls les projets validés et volontairement publiés sont affichés.",
-      skills: "Compétences clés",
-      skillsIntro: "Les compétences deviennent visibles dès qu’elles sont démontrées par un projet terminé.",
-      about: "À propos",
-      aboutText: "Après un parcours mêlant industrie, support utilisateurs, reporting et environnements IT/OT, je développe une nouvelle spécialisation dans la conception d’applications Python."
+      projectsIntro: "Des projets validés présentés sous l’angle des résultats obtenus, des technologies utilisées et des compétences démontrées.",
+      skills: "Compétences principales",
+      aboutEyebrow: "Positionnement",
+      about: "Un profil associant développement logiciel et expérience informatique de terrain",
+      aboutText: "Je m’appuie sur mon expérience des environnements industriels, du support utilisateurs, du reporting, de l’automatisation et de l’IT/OT pour concevoir des applications Python utiles, documentées et maintenables."
     },
-    labels: { validated: "Validé", openclassrooms: "OpenClassrooms", details: "Voir le projet", source: "Code source", objective: "Objectif", highlights: "Points clés", technologies: "Technologies", back: "Retour au portfolio" }
+    labels: { validated: "Validé", openclassrooms: "OpenClassrooms", details: "Voir la fiche", source: "Code source", objective: "Objectif", context: "Contexte", highlights: "Points clés", technologies: "Compétences et technologies", back: "Retour au portfolio" }
   }
 } as const;
 
