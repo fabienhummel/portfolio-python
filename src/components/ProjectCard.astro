@@ -10,12 +10,18 @@ interface Props {
 const { project, locale } = Astro.props;
 const content = project.content[locale] ?? project.content.en;
 const t = ui[locale];
+const statusLabel =
+  project.status === "validated"
+    ? t.labels.validated
+    : project.status === "in-progress"
+      ? t.labels.inProgress
+      : t.labels.planned;
 ---
 
 <a class="project-card" href={localePath(locale, `projects/${project.slug}`)}>
   <div class="project-card-topline">
     <span class="project-code">{project.code}</span>
-    <span class="status-badge">{t.labels.validated}</span>
+    <span class="status-badge">{statusLabel}</span>
   </div>
   <p class="project-tags">{project.technologies.slice(0, 5).join(" · ")}</p>
   <h3>{content.title}</h3>
