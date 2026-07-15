@@ -12,17 +12,13 @@ const content = project.content[locale] ?? project.content.en;
 const t = ui[locale];
 ---
 
-<article class="project-card">
+<a class="project-card" href={localePath(locale, `projects/${project.slug}`)}>
   <div class="project-card-topline">
     <span class="project-code">{project.code}</span>
     <span class="status-badge">{t.labels.validated}</span>
   </div>
+  <p class="project-tags">{project.technologies.slice(0, 5).join(" · ")}</p>
   <h3>{content.title}</h3>
   <p>{content.summary}</p>
-  <ul class="tag-list" aria-label={t.labels.technologies}>
-    {project.technologies.slice(0, 5).map((technology) => <li>{technology}</li>)}
-  </ul>
-  <a class="text-link" href={localePath(locale, `projects/${project.slug}`)}>
-    {t.labels.details} <span aria-hidden="true">→</span>
-  </a>
-</article>
+  <span class="card-link">{t.labels.details} <span aria-hidden="true">→</span></span>
+</a>
