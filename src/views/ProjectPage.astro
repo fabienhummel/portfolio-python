@@ -11,40 +11,49 @@ const currentPath = `projects/${project.slug}`;
 ---
 
 <BaseLayout locale={locale} title={`${content.title} — Fabien Hummel-Knibiely`} description={content.summary} currentPath={currentPath}>
-  <article class="project-detail">
-    <div class="container narrow">
-      <a class="back-link" href={localePath(locale)}>← {t.labels.back}</a>
-      <div class="project-hero">
-        <div class="project-card-topline">
-          <span class="project-code">{project.code}</span>
-          <span class="status-badge">{t.labels.validated}</span>
-        </div>
-        <h1>{content.title}</h1>
-        <p class="hero-intro">{content.summary}</p>
-        <div class="project-links">
-          {project.githubUrl && <a class="button primary" href={project.githubUrl}>{t.labels.source}</a>}
-        </div>
+  <article class="project-detail page-shell">
+    <a class="back-link" href={localePath(locale)}>← {t.labels.back}</a>
+
+    <header class="project-hero">
+      <div class="project-card-topline">
+        <span class="project-code">{project.code}</span>
+        <span class="status-badge">{t.labels.validated}</span>
       </div>
+      <p class="eyebrow">{t.labels.openclassrooms}</p>
+      <h1>{content.title}</h1>
+      <p class="hero-intro">{content.summary}</p>
+      {project.githubUrl && (
+        <div class="project-links">
+          <a class="button primary" href={project.githubUrl}>{t.labels.source}</a>
+        </div>
+      )}
+    </header>
 
-      <section class="detail-section">
-        <h2>{t.labels.objective}</h2>
+    <section class="detail-grid">
+      <article class="detail-card">
+        <h2>{t.labels.context}</h2>
         <p>{content.context}</p>
+      </article>
+      <article class="detail-card result-card">
+        <h2>{t.labels.objective}</h2>
         <p>{content.objective}</p>
-      </section>
+      </article>
+    </section>
 
-      <section class="detail-section">
-        <h2>{t.labels.highlights}</h2>
-        <ul class="feature-list">
-          {content.highlights.map((highlight) => <li>{highlight}</li>)}
-        </ul>
-      </section>
+    <section class="section">
+      <h2>{t.labels.highlights}</h2>
+      <div class="detail-grid">
+        {content.highlights.map((highlight) => (
+          <article class="detail-card"><p>{highlight}</p></article>
+        ))}
+      </div>
+    </section>
 
-      <section class="detail-section">
-        <h2>{t.labels.technologies}</h2>
-        <ul class="tag-list large">
-          {project.technologies.map((technology) => <li>{technology}</li>)}
-        </ul>
-      </section>
-    </div>
+    <section class="section">
+      <h2>{t.labels.technologies}</h2>
+      <div class="skills-list">
+        {project.technologies.map((technology) => <span>{technology}</span>)}
+      </div>
+    </section>
   </article>
 </BaseLayout>
