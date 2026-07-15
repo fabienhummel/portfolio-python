@@ -60,7 +60,30 @@ h3 { margin: 0.75rem 0; font-size: 1.25rem; line-height: 1.2; }
 .project-card p { color: var(--muted); line-height: 1.6; }
 .project-card-topline { display: flex; justify-content: space-between; gap: 1rem; margin-bottom: .75rem; }
 .project-code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--accent); }
-.status-badge { font-size: .75rem; padding: .22rem .6rem; border-radius: 999px; background: rgba(56,189,248,.12); color: var(--accent); }
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: .22rem .6rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: .75rem;
+  font-weight: 800;
+}
+.status-validated {
+  color: #b7ff3c;
+  background: rgba(183, 255, 60, .12);
+  border-color: rgba(183, 255, 60, .35);
+}
+.status-in-progress {
+  color: #f4ff4a;
+  background: rgba(244, 255, 74, .12);
+  border-color: rgba(244, 255, 74, .35);
+}
+.status-planned {
+  color: var(--muted);
+  background: rgba(255, 255, 255, .05);
+  border-color: var(--border);
+}
 .project-tags { color: var(--accent) !important; font-size: .9rem; font-weight: 800; margin: 0 0 .75rem; }
 .card-link { display: inline-block; margin-top: 1rem; color: var(--accent); font-weight: 800; }
 
