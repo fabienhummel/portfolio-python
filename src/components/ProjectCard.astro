@@ -21,7 +21,7 @@ const statusLabel =
 <a class="project-card" href={localePath(locale, `projects/${project.slug}`)}>
   <div class="project-card-topline">
     <span class="project-code">{project.code}</span>
-    <span class="status-badge">{statusLabel}</span>
+    <span class={`status-badge status-${project.status}`}>{statusLabel}</span>
   </div>
   <p class="project-tags">{project.technologies.slice(0, 5).join(" · ")}</p>
   <h3>{content.title}</h3>
