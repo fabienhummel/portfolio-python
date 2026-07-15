@@ -18,6 +18,8 @@ const {
   currentPath = ""
 } = Astro.props;
 const t = ui[locale];
+const canonicalUrl = new URL(Astro.url.pathname, "https://fabienhummel.github.io").toString();
+const socialImageUrl = "https://fabienhummel.github.io/portfolio-python/images/social/portfolio-python.svg";
 ---
 
 <!doctype html>
@@ -27,6 +29,23 @@ const t = ui[locale];
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Portfolio — Développeur Concepteur Logiciel en Python" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta property="og:locale" content={locale === "fr" ? "fr_FR" : "en_US"} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+
     <title>{title}</title>
   </head>
   <body>
