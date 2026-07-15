@@ -1,0 +1,87 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { publishedProjects } from "../data/projects";
+import { publishedSkills } from "../data/skills";
+import type { Locale } from "../data/projects";
+import { localePath, ui } from "../i18n";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = ui[locale];
+---
+
+<BaseLayout locale={locale} currentPath="">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">{t.hero.eyebrow}</p>
+        <h1>{t.hero.title}</h1>
+        <p class="hero-intro">{t.hero.intro}</p>
+        <div class="hero-actions">
+          <a class="button primary" href={localePath(locale, "#projects")}>{t.hero.projects}</a>
+          <a class="button secondary" href="https://github.com/fabienhummel">{t.hero.github}</a>
+        </div>
+      </div>
+      <aside class="profile-panel" aria-label="Profile summary">
+        <span class="profile-label">Fabien Hummel-Knibiely</span>
+        <strong>Python · Automation · Data · IT/OT</strong>
+        <p>Thann, France</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Portfolio</p>
+        <h2>{t.sections.projects}</h2>
+        <p>{t.sections.projectsIntro}</p>
+      </div>
+      <div class="project-grid">
+        {publishedProjects.map((project) => <ProjectCard project={project} locale={locale} />)}
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-muted">
+    <div class="container">
+      <div class="section-heading">
+        <p class="eyebrow">Skills</p>
+        <h2>{t.sections.skills}</h2>
+        <p>{t.sections.skillsIntro}</p>
+      </div>
+      <div class="skill-grid">
+        {publishedSkills.map((skill) => (
+          <article class="skill-card">
+            <span>{skill.category[locale]}</span>
+            <h3>{skill.name[locale]}</h3>
+            <p>{skill.description[locale]}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container about-grid">
+      <div class="section-heading">
+        <p class="eyebrow">Profile</p>
+        <h2>{t.sections.about}</h2>
+      </div>
+      <p class="about-copy">{t.sections.aboutText}</p>
+    </div>
+  </section>
+</BaseLayout>
+
+{locale === "en" && (
+  <script>
+    const savedLanguage = localStorage.getItem("portfolio-language");
+    const browserLanguages = navigator.languages ?? [navigator.language];
+    const prefersFrench = browserLanguages.some((language) => language.toLowerCase().startsWith("fr"));
+    const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+    if (savedLanguage === "fr" || (!savedLanguage && prefersFrench)) {
+      window.location.replace(`${base}/fr/`);
+    }
+  </script>
+)}
