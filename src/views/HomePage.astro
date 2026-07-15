@@ -1,0 +1,64 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { publishedProjects } from "../data/projects";
+import { publishedSkills } from "../data/skills";
+import type { Locale } from "../data/projects";
+import { localePath, ui } from "../i18n";
+
+interface Props { locale: Locale; }
+const { locale } = Astro.props;
+const t = ui[locale];
+---
+
+<BaseLayout locale={locale} currentPath="">
+  <div class="page-shell">
+    <section class="hero">
+      <p class="eyebrow">{t.hero.eyebrow}</p>
+      <h1>{t.hero.title}</h1>
+      <p class="hero-intro">{t.hero.intro}</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#projects">{t.hero.projects}</a>
+        <a class="button secondary" href="#skills">{t.hero.skills}</a>
+      </div>
+    </section>
+
+    <section id="skills" class="section compact-section">
+      <h2>{t.sections.skills}</h2>
+      <div class="skills-list">
+        {publishedSkills.map((skill) => <span>{skill.name[locale]}</span>)}
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">{t.sections.projectsEyebrow}</p>
+          <h2>{t.sections.projects}</h2>
+        </div>
+        <p class="section-intro">{t.sections.projectsIntro}</p>
+      </div>
+      <div class="project-grid">
+        {publishedProjects.map((project) => <ProjectCard project={project} locale={locale} />)}
+      </div>
+    </section>
+
+    <section id="about" class="section about-panel">
+      <p class="eyebrow">{t.sections.aboutEyebrow}</p>
+      <h2>{t.sections.about}</h2>
+      <p>{t.sections.aboutText}</p>
+    </section>
+  </div>
+</BaseLayout>
+
+{locale === "en" && (
+  <script>
+    const savedLanguage = localStorage.getItem("portfolio-language");
+    const browserLanguages = navigator.languages ?? [navigator.language];
+    const prefersFrench = browserLanguages.some((language) => language.toLowerCase().startsWith("fr"));
+    const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+    if (savedLanguage === "fr" || (!savedLanguage && prefersFrench)) {
+      window.location.replace(`${base}/fr/`);
+    }
+  </script>
+)}

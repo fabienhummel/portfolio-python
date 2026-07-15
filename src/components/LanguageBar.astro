@@ -1,0 +1,38 @@
+---
+import type { Locale } from "../data/projects";
+import { localePath } from "../i18n";
+
+interface Props {
+  locale: Locale;
+  currentPath?: string;
+}
+
+const { locale, currentPath = "" } = Astro.props;
+const normalizedPath = currentPath.replace(/^\/+|\/+$/g, "");
+---
+
+<nav class="language-bar" aria-label="Language selection">
+  <a
+    href={localePath("en", normalizedPath)}
+    lang="en"
+    hreflang="en"
+    aria-current={locale === "en" ? "page" : undefined}
+    data-language="en"
+  >EN</a>
+  <span aria-hidden="true">/</span>
+  <a
+    href={localePath("fr", normalizedPath)}
+    lang="fr"
+    hreflang="fr"
+    aria-current={locale === "fr" ? "page" : undefined}
+    data-language="fr"
+  >FR</a>
+</nav>
+
+<script>
+  document.querySelectorAll<HTMLAnchorElement>("[data-language]").forEach((link) => {
+    link.addEventListener("click", () => {
+      localStorage.setItem("portfolio-language", link.dataset.language ?? "en");
+    });
+  });
+</script>
