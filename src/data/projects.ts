@@ -66,8 +66,48 @@ export const projects: Project[] = [
       }
     }
   },
+  {
+    id: "oc-py03",
+    slug: "oc-py03",
+    code: "OC-PY03",
+    type: "openclassrooms",
+    published: true,
+    featured: true,
+    status: "in-progress",
+    order: 3,
+    technologies: ["UML", "Agile", "Scrum", "DDD", "Jira", "Confluence"],
+    skills: ["requirements", "uml", "agile", "technical-design", "technology-watch"],
+    githubUrl: "https://github.com/fabienhummel/OC-PY03",
+    content: {
+      en: {
+        title: "Design a Python application for a client",
+        summary: "An application design project focused on requirements analysis, functional and technical specifications, UML modelling, technology watch and agile project planning.",
+        context: "OpenClassrooms project based on the design of a Python application for an education-sector organisation.",
+        objective: "Translate a client need into a documented, coherent and implementable software solution before development begins.",
+        highlights: [
+          "Functional requirements and stakeholder analysis",
+          "Technical specifications and architecture choices",
+          "UML use-case and class diagrams",
+          "Product backlog and user stories",
+          "Technology watch and documented decision-making"
+        ]
+      },
+      fr: {
+        title: "Concevoir une application Python adaptée aux besoins d’un client",
+        summary: "Un projet de conception d’application centré sur l’analyse du besoin, les spécifications fonctionnelles et techniques, la modélisation UML, la veille technologique et la planification agile.",
+        context: "Projet OpenClassrooms basé sur la conception d’une application Python pour une organisation du secteur de l’éducation.",
+        objective: "Transformer un besoin client en une solution logicielle documentée, cohérente et réalisable avant le démarrage du développement.",
+        highlights: [
+          "Analyse des besoins fonctionnels et des parties prenantes",
+          "Spécifications techniques et choix d’architecture",
+          "Diagrammes UML de cas d’utilisation et de classes",
+          "Backlog produit et user stories",
+          "Veille technologique et décisions documentées"
+        ]
+      }
+    }
+  },
   ...[
-    ["oc-py03", "OC-PY03", "Application design and requirements", "Conception d’une application et analyse du besoin", ["UML", "Agile", "DDD"]],
     ["oc-py04", "OC-PY04", "Object-oriented Python application", "Application Python orientée objet", ["Python", "MVC", "PEP 8"]],
     ["oc-py06", "OC-PY06", "Web user interface", "Interface utilisateur web", ["HTML", "CSS", "JavaScript", "REST API"]],
     ["oc-py07", "OC-PY07", "Algorithms and optimisation", "Algorithmes et optimisation", ["Python", "Big O", "Algorithms"]],
@@ -84,7 +124,7 @@ export const projects: Project[] = [
     published: false,
     featured: false,
     status: "planned" as const,
-    order: index + 3,
+    order: index + 4,
     technologies: technologies as string[],
     skills: [],
     content: {
