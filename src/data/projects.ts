@@ -73,7 +73,7 @@ export const projects: Project[] = [
     type: "openclassrooms",
     published: true,
     featured: true,
-    status: "in-progress",
+    status: "validated",
     order: 3,
     technologies: ["UML", "Agile", "Scrum", "DDD", "Jira", "Confluence"],
     skills: ["requirements", "uml", "agile", "technical-design", "technology-watch"],
@@ -107,8 +107,48 @@ export const projects: Project[] = [
       }
     }
   },
+  {
+    id: "oc-py04",
+    slug: "oc-py04",
+    code: "OC-PY04",
+    type: "openclassrooms",
+    published: true,
+    featured: true,
+    status: "in-progress",
+    order: 4,
+    technologies: ["Python", "MVC", "PEP 8"],
+    skills: ["python", "object-oriented-programming", "mvc", "software-design"],
+    githubUrl: "https://github.com/fabienhummel/OC-PY04",
+    content: {
+      en: {
+        title: "Object-oriented Python application",
+        summary: "An object-oriented Python application project focused on software architecture, maintainable code and clear separation of responsibilities.",
+        context: "OpenClassrooms Python Developer project currently in progress.",
+        objective: "Design and develop a structured Python application using object-oriented principles and a maintainable architecture.",
+        highlights: [
+          "Object-oriented design",
+          "MVC architecture",
+          "PEP 8 code quality",
+          "Project documentation",
+          "Incremental development"
+        ]
+      },
+      fr: {
+        title: "Application Python orientée objet",
+        summary: "Un projet d’application Python orientée objet centré sur l’architecture logicielle, la maintenabilité du code et la séparation claire des responsabilités.",
+        context: "Projet du parcours Développeur Python OpenClassrooms actuellement en cours.",
+        objective: "Concevoir et développer une application Python structurée en appliquant les principes de la programmation orientée objet et une architecture maintenable.",
+        highlights: [
+          "Conception orientée objet",
+          "Architecture MVC",
+          "Qualité du code selon PEP 8",
+          "Documentation du projet",
+          "Développement incrémental"
+        ]
+      }
+    }
+  },
   ...[
-    ["oc-py04", "OC-PY04", "Object-oriented Python application", "Application Python orientée objet", ["Python", "MVC", "PEP 8"]],
     ["oc-py06", "OC-PY06", "Web user interface", "Interface utilisateur web", ["HTML", "CSS", "JavaScript", "REST API"]],
     ["oc-py07", "OC-PY07", "Algorithms and optimisation", "Algorithmes et optimisation", ["Python", "Big O", "Algorithms"]],
     ["oc-py09", "OC-PY09", "Django web application", "Application web Django", ["Python", "Django", "SQL"]],
@@ -124,7 +164,7 @@ export const projects: Project[] = [
     published: false,
     featured: false,
     status: "planned" as const,
-    order: index + 4,
+    order: index + 5,
     technologies: technologies as string[],
     skills: [],
     content: {
