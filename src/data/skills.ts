@@ -55,6 +55,61 @@ export const skills: Skill[] = [
     }
   },
   {
+    id: "requirements-analysis",
+    published: true,
+    order: 5,
+    category: { en: "Software design", fr: "Conception logicielle" },
+    name: { en: "Requirements analysis", fr: "Analyse des besoins" },
+    description: {
+      en: "Translate client needs into clear functional requirements and a defined project scope.",
+      fr: "Transformer les besoins du client en exigences fonctionnelles claires et en périmètre défini."
+    }
+  },
+  {
+    id: "functional-technical-specifications",
+    published: true,
+    order: 6,
+    category: { en: "Software design", fr: "Conception logicielle" },
+    name: { en: "Functional and technical specifications", fr: "Spécifications fonctionnelles et techniques" },
+    description: {
+      en: "Document expected behaviours, architecture choices and implementation constraints.",
+      fr: "Documenter les comportements attendus, les choix d’architecture et les contraintes de réalisation."
+    }
+  },
+  {
+    id: "uml",
+    published: true,
+    order: 7,
+    category: { en: "Modelling", fr: "Modélisation" },
+    name: { en: "UML modelling", fr: "Modélisation UML" },
+    description: {
+      en: "Use-case and class diagrams aligned with functional and technical specifications.",
+      fr: "Diagrammes de cas d’utilisation et de classes cohérents avec les spécifications fonctionnelles et techniques."
+    }
+  },
+  {
+    id: "agile-project-planning",
+    published: true,
+    order: 8,
+    category: { en: "Project management", fr: "Gestion de projet" },
+    name: { en: "Agile project planning", fr: "Planification agile" },
+    description: {
+      en: "Product backlog, user stories, acceptance criteria, prioritisation and estimation.",
+      fr: "Backlog produit, user stories, critères d’acceptation, priorisation et estimation."
+    }
+  },
+  {
+    id: "technology-watch",
+    published: true,
+    order: 9,
+    category: { en: "Engineering", fr: "Ingénierie" },
+    name: { en: "Technology watch", fr: "Veille technologique" },
+    description: {
+      en: "Compare technologies, assess relevant sources and justify technical choices.",
+      fr: "Comparer les technologies, évaluer des sources pertinentes et justifier les choix techniques."
+    }
+  },
+  {
     id: "django",
     published: false,
     order: 10,
