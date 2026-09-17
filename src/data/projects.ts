@@ -148,6 +148,47 @@ export const projects: Project[] = [
       }
     }
   },
+  {
+    id: "atelier-pate",
+    slug: "atelier-pate",
+    code: "PERSO-01",
+    type: "personal",
+    published: true,
+    featured: true,
+    status: "in-progress",
+    order: 5,
+    technologies: ["Python", "Kivy", "pytest", "Ruff", "Git", "GitHub", "i18n"],
+    skills: ["python", "git"],
+    githubUrl: "https://github.com/fabienhummel/atelier-pate",
+    content: {
+      en: {
+        title: "Atelier Pâte",
+        summary: "A local, offline Python/Kivy application for calculating pizza dough ingredient quantities with multilingual support.",
+        context: "Personal project designed as a lightweight, privacy-friendly application with no account, advertising, tracking or telemetry.",
+        objective: "Build a simple and maintainable cross-platform pizza dough calculator with a shared Python core for desktop and future mobile builds.",
+        highlights: [
+          "Offline graphical interface with Kivy",
+          "Baker's percentage calculations for flour, water, salt and yeast",
+          "French and English interface with persistent local language preference",
+          "Automated tests and Ruff quality checks",
+          "Prepared structure for desktop, Android and iOS packaging"
+        ]
+      },
+      fr: {
+        title: "Atelier Pâte",
+        summary: "Une application Python/Kivy locale et hors ligne pour calculer les quantités d’ingrédients d’une pâte à pizza, avec prise en charge multilingue.",
+        context: "Projet personnel conçu comme une application légère et respectueuse de la vie privée, sans compte, publicité, tracking ni télémétrie.",
+        objective: "Créer un calculateur de pâte à pizza simple, maintenable et multiplateforme, avec un cœur Python commun pour le desktop et de futurs builds mobiles.",
+        highlights: [
+          "Interface graphique hors ligne avec Kivy",
+          "Calculs en pourcentages boulangers pour farine, eau, sel et levure",
+          "Interface français/anglais avec mémorisation locale de la langue",
+          "Tests automatisés et contrôle qualité avec Ruff",
+          "Structure préparée pour le packaging desktop, Android et iOS"
+        ]
+      }
+    }
+  },
   ...[
     ["oc-py06", "OC-PY06", "Web user interface", "Interface utilisateur web", ["HTML", "CSS", "JavaScript", "REST API"]],
     ["oc-py07", "OC-PY07", "Algorithms and optimisation", "Algorithmes et optimisation", ["Python", "Big O", "Algorithms"]],
@@ -164,7 +205,7 @@ export const projects: Project[] = [
     published: false,
     featured: false,
     status: "planned" as const,
-    order: index + 5,
+    order: index + 6,
     technologies: technologies as string[],
     skills: [],
     content: {
