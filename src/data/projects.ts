@@ -189,8 +189,45 @@ export const projects: Project[] = [
       }
     }
   },
+  {
+    id: "oc-py06",
+    slug: "oc-py06",
+    code: "OC-PY06",
+    type: "openclassrooms",
+    published: true,
+    featured: true,
+    status: "in-progress",
+    order: 6,
+    technologies: ["HTML", "CSS", "JavaScript", "REST API"],
+    skills: [],
+    content: {
+      en: {
+        title: "Develop a web user interface",
+        summary: "An OpenClassrooms project currently in progress, focused on building a responsive web user interface and interacting with a REST API.",
+        context: "OpenClassrooms Python Developer project currently in progress.",
+        objective: "Build a structured, responsive and interactive web interface using HTML, CSS and JavaScript, connected to a REST API.",
+        highlights: [
+          "Semantic HTML structure",
+          "Responsive CSS layout",
+          "JavaScript interactions",
+          "REST API integration"
+        ]
+      },
+      fr: {
+        title: "Développer une interface utilisateur web",
+        summary: "Un projet OpenClassrooms actuellement en cours, centré sur la réalisation d’une interface web responsive et l’interaction avec une API REST.",
+        context: "Projet du parcours Développeur Python OpenClassrooms actuellement en cours.",
+        objective: "Développer une interface web structurée, responsive et interactive avec HTML, CSS et JavaScript, connectée à une API REST.",
+        highlights: [
+          "Structure HTML sémantique",
+          "Mise en page CSS responsive",
+          "Interactions en JavaScript",
+          "Intégration d’une API REST"
+        ]
+      }
+    }
+  },
   ...[
-    ["oc-py06", "OC-PY06", "Web user interface", "Interface utilisateur web", ["HTML", "CSS", "JavaScript", "REST API"]],
     ["oc-py07", "OC-PY07", "Algorithms and optimisation", "Algorithmes et optimisation", ["Python", "Big O", "Algorithms"]],
     ["oc-py09", "OC-PY09", "Django web application", "Application web Django", ["Python", "Django", "SQL"]],
     ["oc-py10", "OC-PY10", "Secure Django REST API", "API Django REST sécurisée", ["Django REST", "OAuth2", "OWASP"]],
@@ -205,7 +242,7 @@ export const projects: Project[] = [
     published: false,
     featured: false,
     status: "planned" as const,
-    order: index + 6,
+    order: index + 7,
     technologies: technologies as string[],
     skills: [],
     content: {
