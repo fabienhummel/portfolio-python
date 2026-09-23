@@ -55,7 +55,7 @@ Le portfolio est préparé pour présenter les projets professionnalisants suiva
 | Projet | Thèmes principaux | Statut |
 |---|---|---|
 | [OC-PY02 — Analyse de marché avec Python](https://fabienhummel.github.io/portfolio-python/fr/projects/oc-py02/) | Python, ETL, web scraping, CSV, Git | Validé |
-| [OC-PY03 — Concevoir une application adaptée aux besoins d’un client](https://fabienhummel.github.io/portfolio-python/fr/projects/oc-py03/) | Analyse du besoin, Agile, UML, DDD, Jira | En cours |
+| [OC-PY03 — Concevoir une application adaptée aux besoins d’un client](https://fabienhummel.github.io/portfolio-python/fr/projects/oc-py03/) | Analyse du besoin, Agile, UML, DDD, Jira | Validé |
 | [OC-PY04 — Développer un programme logiciel en Python](https://fabienhummel.github.io/portfolio-python/fr/projects/oc-py04/) | POO, MVC, PEP 8, design patterns | Validé |
 | [OC-PY06 — Développer une interface utilisateur web](https://fabienhummel.github.io/portfolio-python/fr/projects/oc-py06/) | HTML, CSS, JavaScript, API REST | En cours |
 | OC-PY07 — Résoudre des problèmes avec des algorithmes | Python, algorithmique, Big O, optimisation | À venir |
