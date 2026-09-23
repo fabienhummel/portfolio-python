@@ -114,16 +114,16 @@ export const projects: Project[] = [
     type: "openclassrooms",
     published: true,
     featured: true,
-    status: "in-progress",
+    status: "validated",
     order: 4,
     technologies: ["Python", "MVC", "PEP 8"],
     skills: ["python", "object-oriented-programming", "mvc", "software-design"],
-    githubUrl: "https://github.com/fabienhummel/OC-PY04",
+    githubUrl: "https://github.com/fabienhummel/OC-PY04-chessflow",
     content: {
       en: {
         title: "Object-oriented Python application",
         summary: "An object-oriented Python application project focused on software architecture, maintainable code and clear separation of responsibilities.",
-        context: "OpenClassrooms Python Developer project currently in progress.",
+        context: "Validated OpenClassrooms Python Developer project focused on building an offline chess tournament management application.",
         objective: "Design and develop a structured Python application using object-oriented principles and a maintainable architecture.",
         highlights: [
           "Object-oriented design",
@@ -136,7 +136,7 @@ export const projects: Project[] = [
       fr: {
         title: "Application Python orientée objet",
         summary: "Un projet d’application Python orientée objet centré sur l’architecture logicielle, la maintenabilité du code et la séparation claire des responsabilités.",
-        context: "Projet du parcours Développeur Python OpenClassrooms actuellement en cours.",
+        context: "Projet validé du parcours Développeur Python OpenClassrooms consacré au développement d’une application hors ligne de gestion de tournois d’échecs.",
         objective: "Concevoir et développer une application Python structurée en appliquant les principes de la programmation orientée objet et une architecture maintenable.",
         highlights: [
           "Conception orientée objet",
