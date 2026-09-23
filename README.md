@@ -54,18 +54,21 @@ Le portfolio est préparé pour présenter les projets professionnalisants suiva
 
 | Projet | Thèmes principaux | Statut |
 |---|---|---|
+| OC-PY01 — Cadrage de la formation | Parcours, objectifs, organisation | Validé |
 | [OC-PY02 — Analyse de marché avec Python](https://fabienhummel.github.io/portfolio-python/fr/projects/oc-py02/) | Python, ETL, web scraping, CSV, Git | Validé |
 | [OC-PY03 — Concevoir une application adaptée aux besoins d’un client](https://fabienhummel.github.io/portfolio-python/fr/projects/oc-py03/) | Analyse du besoin, Agile, UML, DDD, Jira | Validé |
 | [OC-PY04 — Développer un programme logiciel en Python](https://fabienhummel.github.io/portfolio-python/fr/projects/oc-py04/) | POO, MVC, PEP 8, design patterns | Validé |
+| OC-PY05 — Évaluation technique | Évaluation des compétences techniques | En cours |
 | [OC-PY06 — Développer une interface utilisateur web](https://fabienhummel.github.io/portfolio-python/fr/projects/oc-py06/) | HTML, CSS, JavaScript, API REST | En cours |
 | OC-PY07 — Résoudre des problèmes avec des algorithmes | Python, algorithmique, Big O, optimisation | À venir |
+| OC-PY08 — Préparation de l’après-formation | Portfolio, projet professionnel, employabilité | Validé |
 | OC-PY09 — Développer une application web avec Django | Django, MVT, ORM, authentification | À venir |
 | OC-PY10 — Créer une API REST sécurisée | Django REST, OAuth2, OWASP, RGPD | À venir |
 | OC-PY11 — Tester et déboguer une application web Python | Flask, pytest, Selenium, TDD | À venir |
 | OC-PY12 — Développer une architecture back-end sécurisée | Python, SQL, authentification, Sentry | À venir |
 | OC-PY13 — Mettre à l’échelle une application Django | Django modulaire, refactoring, CI/CD, déploiement | À venir |
 
-Les projets 1, 5 et 8 du parcours ne sont pas présentés, car ils correspondent principalement au cadrage de la formation, à une évaluation technique et à la préparation de l’après-formation.
+Les projets OC-PY01, OC-PY05 et OC-PY08 sont référencés dans ce tableau sans lien vers une page dédiée.
 
 ---
 
