@@ -62,7 +62,7 @@ Le portfolio est préparé pour présenter les projets professionnalisants suiva
 | [OC-PY06 — Développer une interface utilisateur web](https://fabienhummel.github.io/portfolio-python/fr/projects/oc-py06/) | HTML, CSS, JavaScript, API REST | En cours |
 | OC-PY07 — Résoudre des problèmes avec des algorithmes | Python, algorithmique, Big O, optimisation | À venir |
 | OC-PY08 — Préparation de l’après-formation | Portfolio, projet professionnel, employabilité | Validé |
-| OC-PY09 — Développer une application web avec Django | Django, MVT, ORM, authentification | À venir |
+| OC-PY09 — Développer une application web avec Django | Django, MVT, ORM, authentification | En cours |
 | OC-PY10 — Créer une API REST sécurisée | Django REST, OAuth2, OWASP, RGPD | À venir |
 | OC-PY11 — Tester et déboguer une application web Python | Flask, pytest, Selenium, TDD | À venir |
 | OC-PY12 — Développer une architecture back-end sécurisée | Python, SQL, authentification, Sentry | À venir |
