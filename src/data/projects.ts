@@ -227,9 +227,46 @@ export const projects: Project[] = [
       }
     }
   },
+  {
+    id: "oc-py09",
+    slug: "oc-py09",
+    code: "OC-PY09",
+    type: "openclassrooms",
+    published: true,
+    featured: true,
+    status: "in-progress",
+    order: 7,
+    technologies: ["Python", "Django", "SQL"],
+    skills: ["python", "django"],
+    content: {
+      en: {
+        title: "Django web application",
+        summary: "An OpenClassrooms project currently in progress, focused on developing a web application with Python, Django and a relational database.",
+        context: "OpenClassrooms Python Developer project currently in progress.",
+        objective: "Build a structured and maintainable Django web application while applying back-end development, data modelling and web development practices.",
+        highlights: [
+          "Python and Django development",
+          "Relational data modelling",
+          "Server-side web application architecture",
+          "Incremental development and project documentation"
+        ]
+      },
+      fr: {
+        title: "Application web Django",
+        summary: "Un projet OpenClassrooms actuellement en cours, centré sur le développement d’une application web avec Python, Django et une base de données relationnelle.",
+        context: "Projet du parcours Développeur Python OpenClassrooms actuellement en cours.",
+        objective: "Développer une application web Django structurée et maintenable en appliquant les pratiques de développement back-end, de modélisation des données et de développement web.",
+        highlights: [
+          "Développement avec Python et Django",
+          "Modélisation de données relationnelles",
+          "Architecture d’application web côté serveur",
+          "Développement incrémental et documentation du projet"
+        ]
+      }
+    }
+  },
   ...[
     ["oc-py07", "OC-PY07", "Algorithms and optimisation", "Algorithmes et optimisation", ["Python", "Big O", "Algorithms"]],
-    ["oc-py09", "OC-PY09", "Django web application", "Application web Django", ["Python", "Django", "SQL"]],
     ["oc-py10", "OC-PY10", "Secure Django REST API", "API Django REST sécurisée", ["Django REST", "OAuth2", "OWASP"]],
     ["oc-py11", "OC-PY11", "Testing and debugging a Python web app", "Tests et débogage d’une application web Python", ["Flask", "pytest", "Selenium"]],
     ["oc-py12", "OC-PY12", "Secure Python and SQL back end", "Back-end sécurisé avec Python et SQL", ["Python", "SQL", "Sentry"]],
@@ -242,7 +279,7 @@ export const projects: Project[] = [
     published: false,
     featured: false,
     status: "planned" as const,
-    order: index + 7,
+    order: index + 8,
     technologies: technologies as string[],
     skills: [],
     content: {
